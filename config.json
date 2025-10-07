@@ -1,0 +1,5 @@
+{
+  "copyPaths": {
+    "example.yml": "./testcopy/config.yml"
+  }
+}

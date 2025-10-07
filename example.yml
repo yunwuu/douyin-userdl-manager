@@ -1,0 +1,33 @@
+#######################################
+# 说明:
+# 1. 井号(#)为注释
+# 2. 缩进严格对齐，使用空格缩进, 注意有些冒号后面有一个空格, 有些没有空格
+# 3. 请使用英文字符
+# 4. 更多yaml语法请上网查看
+#######################################
+
+
+# 作品(视频或图集)、直播、合集、音乐集合、个人主页的分享链接或者电脑浏览器网址
+# (删除文案, 保证只有URL, https://v.douyin.com/kcvMpuN/ 或者 https://www.douyin.com/开头的)
+# 可以设置多个链接, 确保至少一个链接
+# 必选
+link:
+  - https://www.douyin.com/user/MS4wLjABAAAALK15ylKOfoJpXG8Z61u5nxxDkqS5eznbA_8wWZgPPfU?from_tab_name=main&is_search=1&list_name=follow&nt=0  # 我的猫不爱我
+  - https://www.douyin.com/user/MS4wLjABAAAAQ5MLoKCvUDczYQLk_amwYxqUI5HC7Nqj1pT50oST02U?from_tab_name=main&is_search=1&list_name=follow&nt=0  # 香菇终结者
+  - https://www.douyin.com/user/MS4wLjABAAAAUZ_I-4-BaZgTOyEchVpKzGVO92N-QGm92tzAhg71-x065hhlcvZQey4gR5J8odoe?from_tab_name=main&is_search=1&list_name=follow&nt=0  # 香菇酱不是酱
+  - https://www.douyin.com/user/MS4wLjABAAAAulJomBaJ7ZX5wX-Sqt6JjqSi3eLaKW8z3ty8501SBaA?from_tab_name=main&is_search=1&list_name=follow&nt=0  # 阿瓦达啃大瓜
+path: /vol2/1000/Videos/UGC/抖音/self/users/
+
+# 是否下载视频中的音乐(True/False), 默认为True
+# 可选
+music: True
+
+# 是否下载视频的封面(True/False), 默认为True, 当下载视频时有效
+# 可选
+cover: True
+
+# 是否下载作者的头像(True/False), 默认为True
+# 可选
+avatar: True
+
+

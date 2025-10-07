@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>抖音用户下载链接管理工具</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>抖音用户下载链接管理工具</h1>
+      <p>通过此工具可以查看和编辑YAML配置文件中的链接</p>
+    </header>
+    
+    <main>
+      <section class="config-selector">
+        <h2>选择配置文件</h2>
+        <div class="config-controls">
+          <select id="configFiles"></select>
+          <button id="refreshConfigs">刷新</button>
+          <button id="createConfig">创建新配置</button>
+          <button id="setCopyPath" disabled>设置复制路径</button>
+          <button id="copyConfig" disabled>复制配置</button>
+          <button id="deleteConfig" disabled>删除配置</button>
+        </div>
+      </section>
+      
+      <section class="link-manager">
+        <h2>链接管理</h2>
+        <div class="link-controls">
+          <button id="addLink">添加链接</button>
+          <button id="saveLinks" disabled>保存更改</button>
+        </div>
+        
+        <div id="linkList" class="link-list">
+          <p class="empty-message">请先选择一个配置文件</p>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2023 抖音用户下载链接管理工具</p>
+    </footer>
+  </div>
+  
+  <!-- 添加链接的模态框 -->
+  <div id="addLinkModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>添加新链接</h3>
+      <form id="addLinkForm">
+        <div class="form-group">
+          <label for="linkName">主页名称：</label>
+          <input type="text" id="linkName" placeholder="请输入主页名称" required>
+        </div>
+        <div class="form-group">
+          <label for="linkUrl">链接地址：</label>
+          <input type="url" id="linkUrl" placeholder="请输入抖音链接" required>
+        </div>
+        <button type="submit">添加</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- 创建配置文件的模态框 -->
+  <div id="createConfigModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>创建新配置文件</h3>
+      <form id="createConfigForm">
+        <div class="form-group">
+          <label for="configFilename">文件名：</label>
+          <input type="text" id="configFilename" placeholder="请输入配置文件名（不需要扩展名）" required>
+        </div>
+        <button type="submit">创建</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- 确认删除的模态框 -->
+  <div id="confirmDeleteModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>确认删除</h3>
+      <p>您确定要删除此配置文件吗？此操作不可撤销。</p>
+      <div class="modal-actions">
+        <button id="confirmDelete">确认删除</button>
+        <button class="cancel-delete">取消</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 设置复制路径的模态框 -->
+  <div id="setCopyPathModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>设置复制路径</h3>
+      <form id="setCopyPathForm">
+        <div class="form-group">
+          <label for="copyPath">目标路径：</label>
+          <input type="text" id="copyPath" placeholder="请输入配置文件的复制路径" required>
+          <small>提示：包含文件名，例如 /path/to/destination/config.yml</small>
+        </div>
+        <button type="submit">保存</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
